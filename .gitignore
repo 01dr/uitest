@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# IDEA
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Node
+node_modules
+npm-debug.log*
+lerna-debug.log
+package-lock.json
+yarn-error.log
+
+# Other
+build
+dist

@@ -1,0 +1,22 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "description": "Jincor React UI Kit",
+  "main": "index.js",
+  "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run --parallel build",
+    "compile": "lerna run compile",
+    "clean": "lerna run --parallel clean",
+    "dev:core": "lerna run dev --parallel --scope '@ui/core'",
+    "dist:libs": "lerna run dist --parallel --scope '@ui/{core,table}'"
+  },
+  "dependencies": {
+    "lerna": "^2.5.1"
+  }
+}
