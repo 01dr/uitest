@@ -1,11 +1,10 @@
 {
   "name": "@ui/core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Core components",
   "main": "index.js",
   "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "build": "babel -d lib/ src/",
     "dist": "npm-run-all -s 'dist:*'",
