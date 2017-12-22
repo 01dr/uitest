@@ -1,8 +1,9 @@
 {
   "name": "@ui/core",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Core components",
-  "main": "index.js",
+  "main": "dist/core.bundle.js",
+  "module": "src/index.js",
   "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
   "license": "MIT",
   "scripts": {
