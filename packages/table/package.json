@@ -1,6 +1,6 @@
 {
   "name": "@testjcrui/table",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Table components",
   "main": "dist/table.bundle.js",
   "module": "src/index.js",
@@ -15,6 +15,7 @@
     "dist:bundle": "NODE_ENV=production webpack"
   },
   "dependencies": {
+    "@testjcrui/tools": "^0.0.10",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
