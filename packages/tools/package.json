@@ -1,10 +1,13 @@
 {
   "name": "@ui/tools",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Build tools",
   "main": "index.js",
   "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "babel-loader": "^7.1.2",
     "css-loader": "^0.28.7",
