@@ -1,6 +1,6 @@
 {
   "name": "@ui/table",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Table components",
   "main": "index.js",
   "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",

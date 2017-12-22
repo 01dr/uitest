@@ -1,6 +1,6 @@
 {
   "name": "@ui/tools",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Build tools",
   "main": "index.js",
   "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
