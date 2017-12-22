@@ -1,6 +1,6 @@
 {
   "name": "@ui/core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core components",
   "main": "index.js",
   "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
