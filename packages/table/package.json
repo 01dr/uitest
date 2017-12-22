@@ -1,6 +1,6 @@
 {
-  "name": "@ui/table",
-  "version": "0.0.6",
+  "name": "@jcrui/table",
+  "version": "0.0.7",
   "description": "Table components",
   "main": "dist/table.bundle.js",
   "module": "src/index.js",

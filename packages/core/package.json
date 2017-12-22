@@ -1,6 +1,6 @@
 {
-  "name": "@ui/core",
-  "version": "0.0.6",
+  "name": "@jcrui/core",
+  "version": "0.0.7",
   "description": "Core components",
   "main": "dist/core.bundle.js",
   "module": "src/index.js",
