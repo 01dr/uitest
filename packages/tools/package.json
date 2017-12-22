@@ -1,6 +1,6 @@
 {
   "name": "@ui/tools",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Build tools",
   "main": "index.js",
   "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
@@ -21,6 +21,5 @@
     "uglifyjs-webpack-plugin": "^1.1.4",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
-  },
-  "devDependencies": {}
+  }
 }
