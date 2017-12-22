@@ -1,6 +1,6 @@
 {
-  "name": "@jcrui/table",
-  "version": "0.0.7",
+  "name": "@testjcrui/table",
+  "version": "0.0.8",
   "description": "Table components",
   "main": "dist/table.bundle.js",
   "module": "src/index.js",
