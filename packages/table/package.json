@@ -1,9 +1,8 @@
 {
   "name": "@testjcrui/table",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Table components",
-  "main": "dist/table.bundle.js",
-  "module": "src/index.js",
+  "main": "lib/index.js",
   "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
   "license": "MIT",
   "publishConfig": {
@@ -15,7 +14,7 @@
     "dist:bundle": "NODE_ENV=production webpack"
   },
   "dependencies": {
-    "@testjcrui/tools": "^0.0.10",
+    "@testjcrui/tools": "^0.0.11",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"

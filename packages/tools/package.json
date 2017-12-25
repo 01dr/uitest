@@ -1,6 +1,6 @@
 {
   "name": "@testjcrui/tools",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Build tools",
   "main": "index.js",
   "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
