@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Td = (props) => (
-  <table>{props.children}</table>
+  <td>{props.children}</td>
 );
 
 export default Td;

@@ -2,32 +2,32 @@ const webpack = require('webpack');
 const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-const IS_PRODUCTION = process.env.NODE_ENV === "production";
+const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 const plugins = [];
 
 if (IS_PRODUCTION) {
   plugins.push(
     new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify("production"),
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
       },
     }),
     new webpack.LoaderOptionsPlugin({
       debug: false,
       minimize: true,
     }),
-    new ExtractTextPlugin("[name].css"),
-    new UglifyJsPlugin(),
-    new webpack.optimize.ModuleConcatenationPlugin()
+    new ExtractTextPlugin('[name].css'),
+    // new UglifyJsPlugin(),
+    // new webpack.optimize.ModuleConcatenationPlugin()
   );
 }
 
 const scssLoaders = [
   {
-  loader: require.resolve('css-loader'),
+    loader: require.resolve('css-loader'),
     options: { minimize: IS_PRODUCTION },
   },
   {
@@ -56,8 +56,8 @@ module.exports = {
     stats: 'errors-only',
     open: true,
     overlay: {
-       warnings: true,
-       errors: true,
+      warnings: true,
+      errors: true,
     },
     port: 9000
   },
@@ -75,11 +75,11 @@ module.exports = {
             fallback: require.resolve('style-loader'),
             use: scssLoaders
           })
-          : [ require.resolve('style-loader'), ...scssLoaders ],
-        },
+          : [require.resolve('style-loader'), ...scssLoaders],
+      },
       {
         test: /\.(eot|ttf|woff|woff2|svg|png|gif|jpe?g)$/,
-        loader: require.resolve('file-loader'),
+        loader: require.resolve('file-loader')
       }
     ]
   },
@@ -87,6 +87,6 @@ module.exports = {
   plugins,
 
   resolve: {
-    extensions: [ ".js", ".jsx", ".scss" ],
+    extensions: ['.js', '.jsx', '.scss']
   }
 };

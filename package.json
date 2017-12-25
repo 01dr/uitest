@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "testjcrui",
   "version": "0.0.0",
   "description": "Jincor React UI Kit",
   "main": "index.js",
@@ -10,13 +10,68 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run --parallel build",
+    "dist:libs": "lerna run dist --parallel --scope '@testjcrui/{core,table}'",
+    "lint": "xo",
     "compile": "lerna run compile",
     "clean": "lerna run --parallel clean",
-    "dev:core": "lerna run dev --parallel --scope '@ui/core'",
-    "dist:libs": "lerna run dist --parallel --scope '@ui/{core,table}'"
+    "dev:core": "lerna run dev --parallel --scope '@testjcrui/core'"
   },
   "dependencies": {
-    "lerna": "^2.5.1"
+    "babel-eslint": "^8.1.1",
+    "eslint": "^4.14.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-xo": "^0.19.0",
+    "eslint-config-xo-react": "^0.15.0",
+    "eslint-plugin-react": "^7.5.1",
+    "lerna": "^2.5.1",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "parser": "babel-eslint",
+    "extends": [
+      "xo-react",
+      "prettier",
+      "prettier/react"
+    ],
+    "envs": [
+      "browser"
+    ],
+    "space": true,
+    "semicolon": false,
+    "rules": {
+      "indent": [
+        "off"
+      ],
+      "react/jsx-indent-props": [
+        "off"
+      ],
+      "react/jsx-indent": [
+        "off"
+      ],
+      "import/no-unresolved": [
+        "error",
+        {
+          "commonjs": true,
+          "ignore": [
+            "^evergreen-"
+          ]
+        }
+      ],
+      "react/require-default-props": [
+        "off"
+      ],
+      "react/default-props-match-prop-types": [
+        "off"
+      ],
+      "react/forbid-component-props": [
+        "off"
+      ],
+      "react/jsx-no-bind": [
+        "off"
+      ],
+      "unicorn/filename-case": [
+        "off"
+      ]
+    }
   }
 }

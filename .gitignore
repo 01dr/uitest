@@ -16,4 +16,4 @@ yarn-error.log
 
 # Other
 build
-dist
+lib
