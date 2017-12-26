@@ -25,10 +25,16 @@ if (IS_PRODUCTION) {
   );
 }
 
-const scssLoaders = [
+const cssLoaders = [
   {
     loader: require.resolve('css-loader'),
-    options: { minimize: IS_PRODUCTION },
+    options: {
+      modules: true,
+      importLoaders: 1,
+      minimize: true,
+      sourceMap: true,
+      localIdentName: '[local]__[hash:base64:5]'
+    },
   },
   {
     loader: require.resolve('postcss-loader'),
@@ -37,8 +43,7 @@ const scssLoaders = [
         path: path.resolve(__dirname, 'postcss.config.js')
       }
     }
-  },
-  require.resolve('sass-loader')
+  }
 ];
 
 module.exports = {
@@ -69,13 +74,13 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: IS_PRODUCTION
           ? ExtractTextPlugin.extract({
             fallback: require.resolve('style-loader'),
-            use: scssLoaders
+            use: cssLoaders
           })
-          : [require.resolve('style-loader'), ...scssLoaders],
+          : [require.resolve('style-loader'), ...cssLoaders],
       },
       {
         test: /\.(eot|ttf|woff|woff2|svg|png|gif|jpe?g)$/,
