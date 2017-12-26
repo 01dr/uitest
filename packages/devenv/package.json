@@ -1,0 +1,33 @@
+{
+  "name": "@testjcrui/devenv",
+  "version": "0.0.11",
+  "description": "Core components",
+  "main": "lib/index.js",
+  "author": "Aidar Ibatullin <amazing.space.invader@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --config ./webpack.config.js"
+  },
+  "dependencies": {
+    "@testjcrui/tools": "^0.0.11",
+    "copy-webpack-plugin": "^4.3.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^3.1.3",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "devDependencies": {},
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-react-jsx",
+      "react-hot-loader/babel"
+    ]
+  }
+}

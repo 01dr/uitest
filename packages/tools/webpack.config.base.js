@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
@@ -20,8 +20,8 @@ if (IS_PRODUCTION) {
       minimize: true,
     }),
     new ExtractTextPlugin('[name].css'),
-    // new UglifyJsPlugin(),
-    // new webpack.optimize.ModuleConcatenationPlugin()
+    new UglifyJsPlugin(),
+    new webpack.optimize.ModuleConcatenationPlugin()
   );
 }
 
